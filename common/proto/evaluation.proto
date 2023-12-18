@@ -1,0 +1,21 @@
+syntax = 'proto3';
+
+package evaluation_pb;
+
+service Evaluation {
+  rpc ListEvaluationFlags(EvaluationInput) returns (EvaluationList) {}
+}
+
+message EvaluationInput {
+  string tenant_id = 1;
+  string user_id = 2;
+}
+
+message EvaluationFlag {
+  string name = 1;
+  bool enabled = 2;
+}
+
+message EvaluationList {
+  repeated EvaluationFlag evaluation_flag = 1;
+}
