@@ -4,6 +4,7 @@ package evaluation_pb;
 
 service Evaluation {
   rpc ListEvaluationFlags(EvaluationInput) returns (EvaluationList) {}
+  rpc FlagStat(FlagStatInput) returns (noop) {}
 }
 
 message EvaluationInput {
@@ -19,3 +20,12 @@ message EvaluationFlag {
 message EvaluationList {
   repeated EvaluationFlag evaluation_flag = 1;
 }
+
+message FlagStatInput {
+  string tenant_id = 1;
+  string user_id = 2;
+  string flag_id = 3;
+  bool enabled = 4;
+}
+
+message noop {}

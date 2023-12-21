@@ -66,3 +66,47 @@ export namespace EvaluationList {
   }
 }
 
+export class FlagStatInput extends jspb.Message {
+  getTenantId(): string;
+  setTenantId(value: string): FlagStatInput;
+
+  getUserId(): string;
+  setUserId(value: string): FlagStatInput;
+
+  getFlagId(): string;
+  setFlagId(value: string): FlagStatInput;
+
+  getEnabled(): boolean;
+  setEnabled(value: boolean): FlagStatInput;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FlagStatInput.AsObject;
+  static toObject(includeInstance: boolean, msg: FlagStatInput): FlagStatInput.AsObject;
+  static serializeBinaryToWriter(message: FlagStatInput, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FlagStatInput;
+  static deserializeBinaryFromReader(message: FlagStatInput, reader: jspb.BinaryReader): FlagStatInput;
+}
+
+export namespace FlagStatInput {
+  export type AsObject = {
+    tenantId: string,
+    userId: string,
+    flagId: string,
+    enabled: boolean,
+  }
+}
+
+export class noop extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): noop.AsObject;
+  static toObject(includeInstance: boolean, msg: noop): noop.AsObject;
+  static serializeBinaryToWriter(message: noop, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): noop;
+  static deserializeBinaryFromReader(message: noop, reader: jspb.BinaryReader): noop;
+}
+
+export namespace noop {
+  export type AsObject = {
+  }
+}
+

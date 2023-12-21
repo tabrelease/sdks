@@ -82,5 +82,48 @@ export class EvaluationClient {
     this.methodDescriptorListEvaluationFlags);
   }
 
+  methodDescriptorFlagStat = new grpcWeb.MethodDescriptor(
+    '/evaluation_pb.Evaluation/FlagStat',
+    grpcWeb.MethodType.UNARY,
+    evaluation_pb.FlagStatInput,
+    evaluation_pb.noop,
+    (request: evaluation_pb.FlagStatInput) => {
+      return request.serializeBinary();
+    },
+    evaluation_pb.noop.deserializeBinary
+  );
+
+  flagStat(
+    request: evaluation_pb.FlagStatInput,
+    metadata?: grpcWeb.Metadata | null): Promise<evaluation_pb.noop>;
+
+  flagStat(
+    request: evaluation_pb.FlagStatInput,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.RpcError,
+               response: evaluation_pb.noop) => void): grpcWeb.ClientReadableStream<evaluation_pb.noop>;
+
+  flagStat(
+    request: evaluation_pb.FlagStatInput,
+    metadata?: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.RpcError,
+               response: evaluation_pb.noop) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/evaluation_pb.Evaluation/FlagStat',
+        request,
+        metadata || {},
+        this.methodDescriptorFlagStat,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/evaluation_pb.Evaluation/FlagStat',
+    request,
+    metadata || {},
+    this.methodDescriptorFlagStat);
+  }
+
 }
 

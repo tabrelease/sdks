@@ -1,6 +1,6 @@
 {
   "name": "@tabrelease/react-sdk",
-  "version": "1.0.18",
+  "version": "1.0.24",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "grpc-web": "^1.5.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "zustand": "^4.4.7"
   }
 }
