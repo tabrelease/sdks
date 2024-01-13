@@ -7,11 +7,11 @@
 * [Usage](#usage)
 * [API](#api)
   * [TabReleaseProvider](#tabreleaseprovider)
-      * [Props:](#props)
+      * [Props](#props)
   * [reactiveFlags](#reactiveflags)
-    * [Parameters:](#parameters)
+    * [Parameters](#parameters)
   * [Config](#config)
-    * [Properties:](#properties)
+    * [Properties](#properties)
 * [Contributing](#contributing)
 <!-- TOC -->
 
